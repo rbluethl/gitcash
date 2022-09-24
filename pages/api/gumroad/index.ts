@@ -43,7 +43,7 @@ export default async function handler(
         username,
         // Permission is only valid on organization-owned repositories
         // Members to user-owned repositories are always given push access
-        permission: process.env.GITHUB_PERMISSION!
+        permission: process.env.GITHUB_PERMISSION ?? 'pull'
       })
       return res.status(200).end()
     } catch (error) {
