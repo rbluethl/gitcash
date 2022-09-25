@@ -12,6 +12,7 @@ export default async function handler(
     // Handle POST requests to the Gumroad API endpoint
     // Extract Gumroad payload from request body
     const body = req.body
+    console.log(req.body)
 
     // Retrieve short product ID from Gumroad
     const productId = body.short_product_id
