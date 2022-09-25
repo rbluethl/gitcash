@@ -6,6 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === 'POST') {
+    console.log(req.body)
     // Handle POST requests to the Gumroad API endpoint
 
     // Extract secret from query string
