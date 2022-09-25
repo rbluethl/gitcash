@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { Octokit } from 'octokit'
 
 const retrieveValue = (product: string, key: string) =>
-  process.env[`${product}_${key}`] ?? process.env[key]!
+  process.env[`${product.toUpperCase()}_${key}`] ?? process.env[key]!
 
 export default async function handler(
   req: NextApiRequest,
