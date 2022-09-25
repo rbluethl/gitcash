@@ -1,5 +1,7 @@
 # GitCash
 
+![GitCash image](/public/og_image.png)
+
 Sell access to your [GitHub](https://github.com) repos using [Gumroad](https://gumroad.com).
 
 ## Documentation
