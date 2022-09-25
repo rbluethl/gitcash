@@ -51,6 +51,7 @@ const Index = () => {
 
         <Link
           href={`https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2F${owner}%2F${repo}&framework=nextjs&env=API_SECRET,GUMROAD_GITHUB_USERNAME_FIELD,GITHUB_TOKEN,GITHUB_OWNER,GITHUB_REPO`}
+          className="w-full"
         >
           <button className="relative inline-flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-12 py-1.5 font-medium text-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 enabled:hover:bg-sky-700 disabled:cursor-not-allowed  disabled:opacity-50 dark:ring-offset-neutral-900 sm:text-sm">
             <svg
