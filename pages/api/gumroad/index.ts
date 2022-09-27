@@ -35,7 +35,9 @@ export default async function handler(
     const repo = retrieveValue(productId, 'GITHUB_REPO')
 
     if (!usernameField || !token || !owner || !repo) {
-      console.warn(`Missing environment variables for product ${productId}`)
+      console.warn(
+        `Missing environment variables for product with ID ${productId}`
+      )
       return res.status(200).end()
     }
 
