@@ -12,7 +12,6 @@ export default async function handler(
     // Handle POST requests to the Gumroad API endpoint
     // Extract Gumroad payload from request body
     const body = req.body
-    console.log(req.body)
 
     // Retrieve short product ID from Gumroad
     const productId = body.short_product_id
@@ -34,6 +33,12 @@ export default async function handler(
     const token = retrieveValue(productId, 'GITHUB_TOKEN')
     const owner = retrieveValue(productId, 'GITHUB_OWNER')
     const repo = retrieveValue(productId, 'GITHUB_REPO')
+
+    if (!usernameField || !token || !owner || !repo) {
+      console.warn(`Missing environment variables for product ${productId}`)
+      return res.status(200).end()
+    }
+
     const permission = retrieveValue(productId, 'GITHUB_PERMISSION') ?? 'pull'
 
     // Make sure the `GitHub username` field is present in the payload
